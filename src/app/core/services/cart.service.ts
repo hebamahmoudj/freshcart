@@ -44,7 +44,7 @@ baseurl:string='https://ecommerce.routemisr.com/api/v1/'
 
   checkout(id:string|null,orederinfo:object):Observable<any>{
    
-    return this._HttpClient.post(` https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=https://hebamahmoudj.github.io/freshcart/#`,{shippingAddress:orederinfo})
+    return this._HttpClient.post(` https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=https://hebamahmoudj.github.io/freshcart/#/`,{shippingAddress:orederinfo})
     // https://65de626f9069d852900a0533--shimmering-marzipan-3c45dd.netlify.app
   }
 
