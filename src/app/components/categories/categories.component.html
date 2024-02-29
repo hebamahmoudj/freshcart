@@ -1,0 +1,22 @@
+<section class="my-5 p-5">
+  
+    <div class="row  justify-content-center g-4">
+<div *ngFor="let category of Allcategory"   class="col-sm-6 col-md-4 col-lg-3 ">
+
+    <div class="rounded border-success border p-4 " role="button"  [routerLink]="['/categorydetails',category._id]">
+
+        <img height="350px" class="w-100" [src]="category.image" [alt]="category.name">
+
+        <p class=" h5 mt-3 text-main text-center">{{category.name}}</p>
+    </div>
+
+
+
+
+
+</div>
+
+
+    </div>
+
+</section>

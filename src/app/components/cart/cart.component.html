@@ -1,0 +1,37 @@
+<section class="shadow bg-main-light p-4 rounded my-5 w-75  mx-auto mt-sm-5 my-xss-5  mt-xs-5 my-auto" *ngIf="cartdetails !=null else msg ">
+<div class="d-flex align-items-center justify-content-between">
+    <h1>Shop Cart</h1>
+    <button class="btn btn-sm btn-outline-danger" (click)="clearcart()">clear cart</button>
+</div>
+    <p class="text-main small ">total price:    {{cartdetails.totalCartPrice  |currency:'EGP'}} </p>
+    <div class="row border-bottom my-3" *ngFor="let item of cartdetails.products">
+
+        <div class="col-md-1 col-sm-4 col-xs-4">
+            <img [src]="item.product.imageCover" [alt]="item.product.title" class="w-100">
+
+        </div>
+        <div class="col-md-11  col-sm-8  d-flex align-items-center justify-content-between">
+           <div><h3 class="h6">{{item.product.title}}</h3>
+            
+            <p class="text-main small">{{item.price|currency:'EGP'}}</p>
+        
+        
+        
+                <button class="text-main btn mb-0 p-0" #removebtn (click)="removercart(item.product._id,removebtn)"><i class="fas fa-trash-can"></i></button></div>
+                <div>
+            
+                    <button class="btn btn-sm border-success" (click)="changecount(item.product._id,item.count-1,countbtn1,countbtn2)" #countbtn1>-</button>
+                    <span class="mx-2">{{item.count}}</span>
+                    <button class="btn btn-sm border-success"  (click)="changecount(item.product._id,item.count+1,countbtn1,countbtn2)" #countbtn2>+</button>
+                  
+              </div>
+              </div>
+       
+    </div>
+<div class="d-flex gap-3  g-1 justify-content-between ms-auto  d-md-flex d-sm-block d-xs-block">
+    <button  class="main-btn mt-3 p-2 ms-auto mx-1 " [routerLink]="['/payment',cartdetails._id]" >online payment <img src="./assets/images/visa.avif" height="25px" width="25px"></button>
+    <button  class="main-btn mt-3 p-2 px-2 me-auto  " [routerLink]="['/cashpayment',cartdetails._id]" >cash payment <img src="./assets/images/cash1.jpg" height="25px" width="25px"></button>
+</div>
+</section>
+<!-- {{cartdetails}} -->
+<ng-template #msg  ><h2 class="text-main text-center">Your Cart is Empty Now .............</h2> </ng-template>

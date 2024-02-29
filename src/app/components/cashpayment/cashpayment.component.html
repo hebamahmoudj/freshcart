@@ -1,0 +1,97 @@
+<section *ngIf="step1" class="w-50 shadow mx-auto mb-3 bg-main-light p-4 ">
+    <h1 class="h3 mb-3"> check out :</h1>
+        <form [formGroup]="checkoutForm" (ngSubmit)="handleForm()">
+        <div class="form-floating m-3">
+    
+            <input type="text" id="details" formControlName="details" placeholder="details" class="form-control">
+            <label for="details">Details</label>
+        </div>
+        <div class="form-floating  m-3">
+    
+            <input type="tel" id="phone" formControlName="phone" placeholder="phone"  class="form-control">
+            <label for="phone">phone</label>
+        </div>
+        <div class="form-floating  m-3">
+    
+            <input type="text" id="city" formControlName="city"  placeholder="city"  class="form-control">
+            <label for="city">city</label>
+        </div>
+        
+        <button class="main-btn d-block ms-auto mt-3">checkout</button>
+        
+        </form>
+    </section>
+    <section *ngIf="step2" class="   gradient-custom w-75 mx-auto  rounded-circle mt-4 mvh-100">
+
+        <div class="mt-4">
+
+            <div class="purchase overflow-auto">
+               
+                 
+                    <main>
+                        <div class="row mt-3">
+                            <div class="col-sm-3 col-xs-3 to-details mt-3">
+                                <img src="./assets/images/freshcart-logo.svg" class="img-responsive rounded-circle " width="140px" height="140px">
+
+
+                            </div>
+                            <div class="col-sm-9 col-xs-9 purchase-info mt-3">
+                              
+                                   
+                                            <!-- <div class="to-name  fs-4">user details :{{allorders.shippingAddress.details}}</div> -->
+                                            <div class="to-address fs-4">phone {{allorders.shippingAddress.phone}}  </div>
+                                            <div class="to-city fs-4">Address: {{allorders.shippingAddress.details}}</div>
+                                            <!-- <div class="to-city fs-4">city:{{allorders.shippingAddress.city}}</div> -->
+                                            <div class="info-date fs-4">Date: {{allorders.updatedAt|date}}</div>
+
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-sm-12 col-xs-12  table-responsive">
+                                <table class="table shadow   table-sm table-sm-secondary  bg-main-light table-condensed" border="0" cellspacing="0" cellpadding="0" width="100%">
+                                <thead >
+                                    <tr class="mt-3">
+                                        <th class="text-center col-xs-1 col-sm-1 fs-2">#</th>
+                                        <th class="text-center col-xs-7 col-sm-7 fs-2">prodid</th>
+                                        <th class="text-center col-xs-1 col-sm-1 fs-2">Qty</th>
+                                        <th class="text-center col-xs-3 col-sm-3 fs-2">price</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="my-3" *ngFor="let order of allordersdetails ;index as i">
+                                        <td class="col-xs-1 col-sm-1 text-center my-3 fs-1">{{i+1}}</td>
+                                        <td class=" text-center col-xs-7 col-sm-7  my-3 fs-1">{{order._id}}</td>
+                                        <td class=" text-center col-xs-1 col-sm-1 my-3 fs-1">{{order.count}}</td>
+                                        <td class="text-right col-xs-3 col-sm-3  my-3t fs-1">{{order.price|currency:'EGP'}}</td>
+                                    </tr>
+                                    
+                                    
+                                </tbody>
+                               
+                            </table>
+
+                          
+                            </div>
+                        </div>
+
+                        <tfoot class="mt-4">
+                            <tr class="d-flex justify-content-center ">
+                             
+                                <th class="text-center h2 text-main ">Total   price :</th>
+                                <th class="text-right h2">{{allorders.totalOrderPrice}}</th>
+                            </tr>
+                        </tfoot>
+                    </main>
+               
+            </div>
+        </div>
+          </section>
+
+
+
+
+       
