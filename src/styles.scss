@@ -68,6 +68,7 @@
     }
 
 
+  
 
     .product{
         border:1px solid $main-color;
@@ -93,6 +94,14 @@
         
 
     }
+    @media only screen and (max-width: 600px) {
+       .product{
+          padding:2rem;
+          width:80%;
+          margin: auto;
+        }
+      }
+
 
     .active-link{
         color: #fff !important;

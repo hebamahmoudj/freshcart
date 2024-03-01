@@ -71,7 +71,7 @@ mainsliderOptions: OwlOptions = {
     autoplay: true,
     autoplayTimeout: 2000, // Adjust the autoplay interval (in milliseconds)
     autoplayHoverPause: true,
-    autoplaySpeed:1000,
+    autoplaySpeed:1400,
     dots: false,
     navSpeed: 700,
     navText: ['', ''],

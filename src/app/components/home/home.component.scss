@@ -1,3 +1,15 @@
 ::root{
     overflow: hidden;
 }
+
+@media only screen and (max-width: 1200px) {
+    
+    .categoryslidr img{
+        height:200px !important;
+        width:80% !important
+    }
+    .categoryslidr h3{
+        font-size: 13px;
+    }
+   }
+
