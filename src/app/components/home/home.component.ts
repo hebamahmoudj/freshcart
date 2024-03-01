@@ -51,13 +51,13 @@ searchword:string='';
         items: 1
       },
       400: {
-        items: 2
-      },
-      740: {
         items: 4
       },
+      740: {
+        items: 5
+      },
       940: {
-        items:5
+        items:6
       }
     },
     nav: false

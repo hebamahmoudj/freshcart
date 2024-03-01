@@ -29,12 +29,12 @@ export class ProductdetailsComponent  implements OnInit{
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
-    dots: false,
-    autoplay: true,
+    dots: true,
+    // autoplay: true,
     autoplayTimeout: 2000, // Adjust the autoplay interval (in milliseconds)
     autoplayHoverPause: true,
     // autoplaySpeed: 1000,
-    navSpeed: 700,
+    navSpeed: 2000,
     navText: ['', ''],
     items:1,
   

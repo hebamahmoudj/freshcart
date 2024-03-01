@@ -7,10 +7,10 @@
          
          <owl-carousel-o [options]="mainsliderOptions">
            <ng-template carouselSlide>
-            <img    height="550px" src="./assets/images/slider-image-1.jpeg" alt="slide1">
+            <img    height="500px" src="./assets/images/slider-image-1.jpeg" alt="slide1">
            </ng-template>  
-           <ng-template carouselSlide><img height="550px"  src="./assets/images/slider-image-2.jpeg" alt="slide2"></ng-template>  
-           <ng-template   carouselSlide><img    height="550px"  src="./assets/images/slider-image-3.jpeg" alt="slide3"></ng-template>  
+           <ng-template carouselSlide><img height="500px"  src="./assets/images/slider-image-2.jpeg" alt="slide2"></ng-template>  
+           <ng-template   carouselSlide><img    height="500px"  src="./assets/images/slider-image-3.jpeg" alt="slide3"></ng-template>  
          </owl-carousel-o>
          
       </div>
@@ -18,8 +18,8 @@
    
    <div class="col-md-3">
       
-      <img  height="275px" src="./assets/images/grocery-banner-2.jpeg" alt="" class="w-100">
-      <img   height="275px" src="./assets/images/grocery-banner.png" alt="" class="w-100">
+      <img  height="250px" src="./assets/images/grocery-banner-2.jpeg" alt="" class="w-100">
+      <img   height="250px" src="./assets/images/grocery-banner.png" alt="" class="w-100">
    </div>
 </div>
 </section>
@@ -32,7 +32,7 @@
  
      <ng-container *ngFor="let category of categories">
        <ng-template carouselSlide>
-         <img height="450px" [src]="category.image" [alt]="category.name" [title]="category.name" class="w-100">
+         <img height="350px" [src]="category.image" [alt]="category.name" [title]="category.name" class="w-100">
          <h3 class="h4 text-main">{{category.name}}</h3>
        </ng-template>
      </ng-container>
