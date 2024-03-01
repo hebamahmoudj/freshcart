@@ -7,9 +7,9 @@
 
             <div>
 
-                <owl-carousel-o [options]="customOptions">
+                <owl-carousel-o class="slider"  [options]="customOptions">
  
-                    <ng-container *ngFor="let image of productdetails.images">
+                    <ng-container       *ngFor="let image of productdetails.images">
                       <ng-template carouselSlide>
                         <img [src]="image" alt="productimages" class="w-100  ">
                       </ng-template>
