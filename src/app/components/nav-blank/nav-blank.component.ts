@@ -4,6 +4,8 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { CartService } from 'src/app/core/services/cart.service';
 import { WishlistService } from 'src/app/core/services/wishlist.service';
 import { AuthService } from 'src/app/core/services/auth.service';
+import { ProductProduct } from 'src/app/core/interfaces/cart';
+import { ProductService } from 'src/app/core/services/product.service';
 
 @Component({
   selector: 'app-nav-blank',
@@ -17,6 +19,7 @@ export class NavBlankComponent implements OnInit {
     private _CartService:CartService,
     private _WishlistService:WishlistService,
     private _AuthService:AuthService,
+    private _ProductService:ProductService,
     
     private _Renderer2:Renderer2){
 
@@ -27,12 +30,14 @@ export class NavBlankComponent implements OnInit {
 if( scrollY> 500){
     this._Renderer2.addClass(this.navbar.nativeElement,'px-5')
     this._Renderer2.addClass(this.navbar.nativeElement,'shadow')
+    this._ProductService.scrolly.next(true)
   
 
   }
   else{
     this._Renderer2.removeClass(this.navbar.nativeElement,'px-5')
     this._Renderer2.removeClass(this.navbar.nativeElement,'shadow')
+    this._ProductService.scrolly.next(false)
 
 
   }

@@ -3,4 +3,4 @@
 <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
-<button class="btn-up" (click)="goup()"><i class="fas fa-angle-up"></i></button>
+<button class="btn-up" (click)="goup()" *ngIf="scrolltoy"><i class="fas fa-angle-up"></i></button>

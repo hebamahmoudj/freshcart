@@ -51,9 +51,9 @@
          
               <li class="nav-item me-2">
                 <a class="nav-link position-relative" >
-                <i class="fas fa-heart  text-danger fa-3x" routerLink="/wishlist"></i>
+                <i class="fas fa-heart  text-success fa-2x" routerLink="/wishlist" [ngClass]="wishnum>0?'text-danger':'text-success'"></i>
              
-                <span class="badge bg-info position-absolute top-0 end-0">{{wishnum}}</span>
+                <span class="badge bg-info position-absolute top-0 end-0" *ngIf="wishnum>0">{{wishnum}}</span>
 
 
                 </a>
@@ -61,7 +61,7 @@
             <li class="nav-item me-2">
                 <a class="nav-link position-relative"routerLink="/cart" >
                 <i class="fas fa-shopping-cart text-main fa-2x"></i>
-                <span class="badge bg-info position-absolute top-0 end-0">{{cartnum}}</span>
+                <span class="badge bg-info position-absolute top-0 end-0" *ngIf="cartnum>0">{{cartnum}}</span>
 
 
                 </a>
