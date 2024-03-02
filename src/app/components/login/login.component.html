@@ -40,12 +40,42 @@
     <p class="mb-0" *ngIf="loginForm.get('password')?.getError('pattern')">password inncorect min length is 6</p>
 
 </div>
+<div class="d-flex justify-content-between align-items-center mt-4">
+   
+    <a class="link-opacity-75-hover  link-offset-2 link-underline link-underline-opacity-25 mt-4" routerLink='/forget' routerLinkActive="router-link-active" >forgot password?</a>
+
+
+    <button [disabled]="loginForm.invalid" class="main-btn d-block ms-auto p-2 m-4 px-4 loginbtn ">login<span *ngIf="isloading"><i class=" fa fa-spinner fa-spin"></i></span></button>
+  
+
+
+   
+   
+
+
+</div>
+<hr class="w-75 ">
+<div>
+    <a class="link-opacity-50-hover link-underline-light ms-2 fs-4" routerLink='/register' routerLinkActive="router-link-active" >create account</a>
+ </div>
+
+
+
+<!--<button [disabled]="loginForm.invalid" class="main-btn d-block m-auto p-2 w-25 loginbtn">login<span *ngIf="isloading"><i class=" fa fa-spinner fa-spin"></i></span></button>
+<a class=" d-block text-underline-none text-center ms-auto" routerLink='/forget' routerLinkActive="router-link-active" >forgetpassword?</a>
 
 
 
 
+ <div class="d-flex justify-content-center align-items-center">
+    
+    <div>
+<br>
 
-<button [disabled]="loginForm.invalid" class="main-btn d-block ms-auto p-2">login<span *ngIf="isloading"><i class=" fa fa-spinner fa-spin"></i></span></button> <a class="text-underline-none" routerLink='/forget' routerLinkActive="router-link-active" >forgetpassword?</a>
+<hr class="w-100 m-auto my-2 ">
+    <p class="text-muted"> if you not have an account please <a class="text-underline-none ms-2" routerLink='/register' routerLinkActive="router-link-active" >signin</a> </p>
+</div>
+</div> -->
 
 </form>
 <p class="alert alert-danger mx-auto p-1 mb-0" *ngIf="errorMsg">{{errorMsg}}</p>
