@@ -1,4 +1,7 @@
-<section class="shadow bg-main-light p-4 rounded my-5 w-75  mx-auto mt-sm-5 my-xss-5  mt-xs-5 my-auto" *ngIf="cartdetails !=null else msg ">
+<section class="shadow bg-main-light rounded " *ngIf="cartdetails !=null else msg ">
+
+
+    <div class="container p-5">
 <div class="d-flex align-items-center justify-content-between">
     <h1>Shop Cart</h1>
     <button class="btn btn-sm btn-outline-danger" (click)="clearcart()">clear cart</button>
@@ -28,9 +31,10 @@
               </div>
        
     </div>
-<div class="d-flex gap-3  g-1 justify-content-between ms-auto  d-md-flex d-sm-block d-xs-block">
-    <button  class="main-btn mt-3 p-2 ms-auto mx-1 " [routerLink]="['/payment',cartdetails._id]" >online payment <img src="./assets/images/visa.avif" height="25px" width="25px"></button>
-    <button  class="main-btn mt-3 p-2 px-2 me-auto  " [routerLink]="['/cashpayment',cartdetails._id]" >cash payment <img src="./assets/images/cash1.jpg" height="25px" width="25px"></button>
+<div class=" paymentbtn d-flex gap-2   justify-content-center ms-auto  d-md-flex d-sm-block d-xs-block">
+    <button  class="main-btn  p-2 px-4  m-4 mt-0  flex-shrink-0  " [routerLink]="['/payment',cartdetails._id]" >online payment <img src="./assets/images/visa.avif" height="25px" width="25px"></button>
+    <button  class="main-btn  p-2  m-4 px-4 mt-0 flex-shrink-0 " [routerLink]="['/cashpayment',cartdetails._id]" >cash payment <img src="./assets/images/cash1.jpg" height="25px" width="25px"></button>
+</div>
 </div>
 </section>
 <!-- {{cartdetails}} -->

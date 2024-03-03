@@ -1,6 +1,6 @@
-<section *ngIf="step1" class="w-50 shadow mx-auto mb-3 bg-main-light p-4 ">
+<section *ngIf="step1" class="paymentform w-75 bg-main-light  shadow rounded p-4 my-4 m-auto ">
     <h1 class="h3 mb-3"> check out :</h1>
-        <form [formGroup]="checkoutForm" (ngSubmit)="handleForm()">
+        <form [formGroup]="checkoutForm" (ngSubmit)="handleForm()"  >
         <div class="form-floating m-3">
     
             <input type="text" id="details" formControlName="details" placeholder="details" class="form-control">
