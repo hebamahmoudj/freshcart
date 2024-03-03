@@ -1,0 +1,7 @@
+<section class=" subcateg p-5  shadow w-50 mx-auto bg-main-light" *ngIf="specificsubcategory !=null" >
+<div class="bg-light p-5 shadow" [routerLink]="['/allsubcategiesoncategory',specificsubcategory.category]" >
+    <h1  class="h4 text-center">{{specificsubcategory.name}}</h1>
+    <p class="text-center">{{specificsubcategory.slug}}</p>
+
+</div>
+</section>

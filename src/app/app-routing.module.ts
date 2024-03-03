@@ -21,8 +21,10 @@ const routes: Routes = [
 {path:'branddetails/:id',loadComponent:()=>import('./components/branddetails/branddetails.component').then((m)=>m.BranddetailsComponent),title:'brandDetails'},
 {path:'categories',loadComponent:()=>import('./components/categories/categories.component').then((m)=>m.CategoriesComponent),title:'CATERGORIES'},
 {path:'categorydetails/:id',loadComponent:()=>import('./components/categorydetails/categorydetails.component').then((m)=>m.CategorydetailsComponent),title:'categorydetails'},
-
+{path:'specificsubcategory/:id',loadComponent:()=>import('./components/specificsubcategory/specificsubcategory.component').then((m)=>m.SpecificsubcategoryComponent),title:'specific subcategory'},
+{path:'allsubcategiesoncategory/:id',loadComponent:()=>import('./components/allsubcategiesoncategory/allsubcategiesoncategory.component').then((m)=>m.AllsubcategiesoncategoryComponent),title:'subcategoriesoncategory'},
 {path:'payment/:id',loadComponent:()=>import('./components/payment/payment.component').then((m)=>m.PaymentComponent),title:'payment'},
+
 {path:'cashpayment/:id',loadComponent:()=>import('./components/cashpayment/cashpayment.component').then((m)=>m.CashpaymentComponent)},
 {path:'wishlist',loadComponent:()=>import('./components/wishlist/wishlist.component').then((m)=>m.WishlistComponent),title:'wishlist'},
 {path:'forgetpassword',loadComponent:()=>import('./components/forgetpassword/forgetpassword.component').then((m)=>m.ForgetpasswordComponent),title:'forgetpassword'},

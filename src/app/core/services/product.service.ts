@@ -24,6 +24,17 @@ getproductdetails(id:string|null):Observable<any>{
 getcategorydetails(id:string|null):Observable<any>{
   return  this._HttpClient.get(`https://ecommerce.routemisr.com/api/v1/categories/${id}`)
 }
+
+getallsubcatwgories(pagenum:number=1):Observable<any>{
+  return  this._HttpClient.get(`https://ecommerce.routemisr.com/api/v1/subcategories?page=${pagenum}`)
+}
+getspecificsubcategory(id:string|null):Observable<any>{
+  return this._HttpClient.get(`https://ecommerce.routemisr.com/api/v1/subcategories/${id}`)
+
+}
+getallsubcategiesoncategory(id:string|null):Observable<any>{
+  return this._HttpClient.get(`https://ecommerce.routemisr.com/api/v1/categories/${id}/subcategories`)
+}
 getAllBrands():Observable<any>{
  return this._HttpClient.get('https://ecommerce.routemisr.com/api/v1/brands')
 }
